@@ -151,13 +151,13 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
                                     Expanded(
                                         child: Image.asset("images/bank.png")),
                                     Text(
-                                      "25|July|2023",
+                                      "26|July|2023",
                                       style: GoogleFonts.poppins(
                                           fontSize: 12,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Text(
-                                      "10:30 AM",
+                                      "12:00 PM",
                                       style: GoogleFonts.poppins(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold),
@@ -218,7 +218,7 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
               top: 115,
               child: Center(
                   child: Text(
-                " 0015",
+                " 0017",
                 style: GoogleFonts.poppins(
                     fontSize: 30, fontWeight: FontWeight.bold),
               ))),

@@ -133,7 +133,7 @@ class _RegisterScreenState extends State<RegisterScreen> with Helpers {
                         height: 5,
                       ),
                       ButtonWidget(
-                        title: "SIGN IN",
+                        title: "SIGN UP",
                         onPressed: () => _performRegister(),
                         width: 217,
                         height: 41,
@@ -197,7 +197,7 @@ class _RegisterScreenState extends State<RegisterScreen> with Helpers {
     _changeProgressValue(value: status ? 1 : 0);
     print(status);
     if (status) {
-      showSnackBar(context: context, message: 'sign up successfully');
+      showSnackBar(context: context, message: 'sign up successfully, Check your email for verification');
       Navigator.pushReplacementNamed(context, Routes.loginScreen);
     } else {
       Navigator.pop(context);

@@ -73,7 +73,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Icons.person,
                             ),
                             Text(
-                              " Name : Shatha Nadie ",
+                              " Name : Abeer Saqer Abu Laila ",
                               style: GoogleFonts.poppins(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w400,
@@ -87,7 +87,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Icons.person,
                             ),
                             Text(
-                              " ID : 8785589741",
+                              " ID : 405960568",
                               style: GoogleFonts.poppins(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w400,
@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Icons.phone,
                             ),
                             Text(
-                              " Phone Number :+972592085724",
+                              " Phone Number :+972597510828",
                               style: GoogleFonts.poppins(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w400,
@@ -115,7 +115,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Icons.email,
                             ),
                             Text(
-                              " Email : shathaaboyo18@gmail.com",
+                              " Email : abeerabulaila@gmail.com",
                               style: GoogleFonts.poppins(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w400,
@@ -129,7 +129,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Icons.location_on_sharp,
                             ),
                             Text(
-                              " Address: Gaza - Al_Nusurat",
+                              " Address: Gaza - al-nusirat",
                               style: GoogleFonts.poppins(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w400,

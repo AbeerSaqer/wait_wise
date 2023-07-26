@@ -75,14 +75,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       Image.asset("images/profile_drower.png",
                           width: 80, height: 80),
                       const Text(
-                        'Shatha Nadir ',
+                        'Abeer Saqer ',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
                         ),
                       ),
                       const Text(
-                        'Shathaaboyo18@gmail.com',
+                        'abeerabulaila00@gmail.com',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,

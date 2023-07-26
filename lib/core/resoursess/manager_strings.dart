@@ -4,8 +4,9 @@ class ManagerStrings {
   static const String skip = 'Skip';
   static const String outBoardingTitle1 = """No need to stand in
      line anymore """;
-  static const String outBoardingTitle2 = """No need to stand in
-     line anymore """;
+  static const String outBoardingTitle2 = """  You can now book your
+    appointment through
+        the application.""";
   static const String outBoardingTitle3 = """Just select your location   
      and we will take care
               of the rest""";
@@ -24,13 +25,13 @@ class ManagerStrings {
   static const String getStartButton = "LET'S START !";
   static const String bearer = 'Bearer';
   static const String login = 'Login';
-  static const String dontHaveAccountHeader = """   Already 
-   have an
-   Account ?""";
+  static const String dontHaveAccountHeader = """  Already 
+  have an 
+  Account ?""";
   static const String haveAccountHeader = """ Here's
  your first 
-step with
-us !
+ step with
+ us !
   """;
   static const String register = 'Register';
   static const String password = 'Password';
