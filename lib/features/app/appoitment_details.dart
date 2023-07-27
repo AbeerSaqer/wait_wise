@@ -22,16 +22,16 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
             Icons.arrow_back_ios,
             color: Colors.black,
           ),
-          onPressed: () => Navigator.pushReplacementNamed(context, '/map'),
+          onPressed: () => Navigator.pushReplacementNamed(context, '/home_screen'),
         ),
       ),
       body: Stack(
         children: [
           Positioned(
-            left: 115,
+            left: 109,
             top: 10,
             child: Text(
-              "Appoitment Details ",
+              "Appointment Details ",
               style: GoogleFonts.poppins(color: Colors.white, fontSize: 18),
             ),
           ),
@@ -69,7 +69,7 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Text(
-                                    "0015",
+                                    "0017",
                                     style: GoogleFonts.poppins(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold),
@@ -120,7 +120,7 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Text(
-                                    "9 Minutes",
+                                    "7 Minutes",
                                     style: GoogleFonts.poppins(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold),
@@ -143,7 +143,7 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Appoitment",
+                                      "Appointment",
                                       style: GoogleFonts.poppins(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold),
@@ -151,7 +151,7 @@ class _AppointmentDetailsState extends State<AppointmentDetails> {
                                     Expanded(
                                         child: Image.asset("images/bank.png")),
                                     Text(
-                                      "26|July|2023",
+                                      "27|July|2023",
                                       style: GoogleFonts.poppins(
                                           fontSize: 12,
                                           fontWeight: FontWeight.bold),

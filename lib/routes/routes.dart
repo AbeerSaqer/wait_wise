@@ -16,6 +16,8 @@ import 'package:grad_project/features/lunch/persintation/view/lunch_screen.dart'
 import 'package:grad_project/features/out_bording/persintation/view/out_bording_screen.dart';
 import 'package:grad_project/firebase/fetch_data.dart';
 
+import '../features/app/qr_image.dart';
+
 class Routes {
   static const String lunchScreen = '/launch_screen';
   static const String fetchData = '/fetch_data';
@@ -35,6 +37,7 @@ class Routes {
   static const String map = '/map';
   static const String appointmentScreen = '/appointment_screen';
   static const String qrCodeScreen = '/qr_code_screen';
+  static const String qrCode = '/qr_code';
 }
 
 class RouteGenerator {
@@ -82,6 +85,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => MapView());
       case Routes.qrCodeScreen:
         return MaterialPageRoute(builder: (_) => const QrCodeScreen());
+        case Routes.qrCode:
+        return MaterialPageRoute(builder: (_) => const QrCode());
       default:
         return unDefinedRoute();
     }

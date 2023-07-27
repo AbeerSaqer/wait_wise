@@ -85,7 +85,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: const Text(
-          "Available Service ",
+          "Available Services ",
           style: TextStyle(color: Colors.black54),
         ),
       ),

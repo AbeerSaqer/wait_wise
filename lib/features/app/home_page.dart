@@ -208,6 +208,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               ListTile(
                 leading: const Icon(
+                  Icons.qr_code_2,
+                  color: Colors.white,
+                ),
+                title: TextButton(
+                    child: const Align(
+                        alignment: AlignmentDirectional.topStart,
+                        child: const Text(
+                          'Qr code',
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 18),
+                        )),
+                    onPressed: () => Navigator.pushReplacementNamed(
+                        context, '/qr_code')),
+              ),
+              ListTile(
+                leading: const Icon(
                   Icons.logout_outlined,
                   color: Colors.white,
                 ),

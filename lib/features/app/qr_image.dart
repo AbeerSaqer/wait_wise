@@ -5,73 +5,55 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:grad_project/core/widgets/buttons.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class QrCodeScreen extends StatefulWidget {
-  const QrCodeScreen({Key? key}) : super(key: key);
+class QrCode extends StatefulWidget {
+  const QrCode({Key? key}) : super(key: key);
 
   @override
-  State<QrCodeScreen> createState() => _QrCodeScreenState();
+  State<QrCode> createState() => _QrCodeState();
+
 }
 
-class _QrCodeScreenState extends State<QrCodeScreen> {
-  void requestPermission() async {
-    FirebaseMessaging messaging = FirebaseMessaging.instance;
-    NotificationSettings settings = await messaging.requestPermission(
-      alert: true,
-      announcement: false,
-      badge: true,
-      carPlay: false,
-      criticalAlert: false,
-      provisional: false,
-      sound: true,
-    );
-    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
-      print("User granted permission");
-    }
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print(
-          "Title : ${message.notification?.title} | body : ${message.notification?.body}");
-    });
-  }
+class _QrCodeState extends State<QrCode> {
+  int _selectedIndex = 0;
 
   @override
   void initState() {
     super.initState();
-    requestPermission();
   }
 
   void displayDialog() {
     showDialog(
         context: context,
         builder: (BuildContext context) => CupertinoAlertDialog(
-              title: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Icon(Icons.notifications_on_outlined),
-                  Expanded(
-                    child: Text(
-                        """Allow "WaitWise" to send notification on your mobile ? """),
-                  ),
-                ],
+          title: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(Icons.notifications_on_outlined),
+              Expanded(
+                child: Text(
+                    """Allow "WaitWise" to send notification on your mobile ? """),
               ),
-              actions: [
-                CupertinoDialogAction(
-                    onPressed: () {},
-                    child: TextButton(
-                        onPressed: () async {
-                          FirebaseMessaging.instance.getToken().then((token) {
-                            print("My token  : $token");
-                          });
-                          Navigator.pushReplacementNamed(context, '/home_screen');
-                        },
-                        child: Text("Allow"))),
-                CupertinoDialogAction(
-                    onPressed: () {},
-                    child: TextButton(
-                        onPressed: () => Navigator.pushReplacementNamed(
-                            context, '/qr_code_screen'),
-                        child: Text(" Don't Allow"))),
-              ],
-            ));
+            ],
+          ),
+          actions: [
+            CupertinoDialogAction(
+                onPressed: () {},
+                child: TextButton(
+                    onPressed: () async {
+                      FirebaseMessaging.instance.getToken().then((token) {
+                        print("My token  : $token");
+                      });
+                      Navigator.pushReplacementNamed(context, '/home_screen');
+                    },
+                    child: Text("Allow"))),
+            CupertinoDialogAction(
+                onPressed: () {},
+                child: TextButton(
+                    onPressed: () => Navigator.pushReplacementNamed(
+                        context, '/qr_code_screen'),
+                    child: Text(" Don't Allow"))),
+          ],
+        ));
   }
 
   @override
@@ -116,11 +98,11 @@ class _QrCodeScreenState extends State<QrCodeScreen> {
                       child: Column(
                         children: [
                           Center(
-                              child: QrImageView(
-                                data: 'Appointment serial number',
-                                version: QrVersions.auto,
-                                size: 200.0,
-                              ),),
+                            child: QrImageView(
+                              data: 'Appointment serial number',
+                              version: QrVersions.auto,
+                              size: 200.0,
+                            ),),
                           SizedBox(
                             height: 15,
                           ),
@@ -149,22 +131,38 @@ class _QrCodeScreenState extends State<QrCodeScreen> {
               top: 115,
               child: Center(
                   child: Text(
-                " 0017",
-                style: GoogleFonts.poppins(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ))),
-          Positioned(
-              bottom: 40,
-              left: 125,
-              child: ButtonWidget(
-                  title: "Confirm",
-                  onPressed: displayDialog,
-                  width: 140,
-                  height: 40,
-                  color: Colors.blue))
+                    " 0017",
+                    style: GoogleFonts.poppins(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ))),
         ],
+      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Service',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Personal',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blue,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
       ),
     );
   }

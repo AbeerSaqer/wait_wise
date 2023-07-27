@@ -115,9 +115,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Icons.email,
                             ),
                             Text(
-                              " Email : abeerabulaila@gmail.com",
+                              " Email : abeerabulaila00@gmail.com",
                               style: GoogleFonts.poppins(
-                                  fontSize: 18,
+                                  fontSize: 17,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white),
                             ),
